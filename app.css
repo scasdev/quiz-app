@@ -1,0 +1,39 @@
+/* General Style */
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  margin: 0;
+  background-color: gray;
+ 
+}
+
+header {
+  margin: 200px 0 0 0; 
+}
+
+.start-box, .question-box, .answer-box {
+  width:50%;
+  padding: 30px 30px 30px 30px;
+  margin: 0 auto 0 auto;
+  background:white;
+}
+
+.question-box button {
+  float: right;
+}
+
+.question-and-score {
+  margin: 40px 0 0 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0  0 50px 0;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
