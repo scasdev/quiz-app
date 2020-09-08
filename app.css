@@ -17,7 +17,7 @@ header {
 }
 
 .start-box, .question-box, .answer-box {
-  width:50%;
+  width:60%;
   padding: 30px 30px 40px 30px;
   margin: 0 auto 0 auto;
   background: rgba(255, 240, 172, 0.9);
@@ -39,6 +39,7 @@ h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0  0 50px 0;
   color: rgba(78, 29, 17);
+  line-height: 35px;
 }
 
 hr {
