@@ -140,7 +140,7 @@ let returnStartPageHtml = () => {
 let returnPageQuestionHtml = () => {
   let currentQuestion = store.questions[store.questionNumber];
   return `
-  <p>${currentQuestion.question}</p>
+  ${currentQuestion.question}
   `;
 }
 
@@ -152,10 +152,10 @@ let returnPageAnswersHtml = () => {
   // cycle through the page's answers, and generate the html
   for (let i = 0; i < pageAnswers.length; i++) {
     pageAnswerHtml += `
-    <div id="option-container-${i}">
-      <input type="radio" name="options" id="option${i + 1}" value="${pageAnswers[i]}" tabindex="${i + 1}" required="">
-      <label for="option${i + 1}">${pageAnswers[i]}</label>
-    </div>
+      <div id="option-container-${i}">
+          <input type="radio" name="options" id="option${i + 1}" value="${pageAnswers[i]}" tabindex="${i + 1}" required="">
+          <label for="option${i + 1}">${pageAnswers[i]}</label>
+      </div>
     `}
 
   return pageAnswerHtml;
@@ -178,9 +178,11 @@ let returnCompleteQuestionHtml = () => {
   return `
   <div class="question-box">
     <h1>The Haitian Revolution Quiz</h1>
-    ${returnPageQuestionHtml()}
-    ${returnPageAnswersHtml()}
+    <form>
+    <legend>${returnPageQuestionHtml()}</legend>
+    <fieldset>${returnPageAnswersHtml()}</fieldset>
     <button type="button" id="submit-answer-btn" class="btn">Submit</button>
+    </form>
     ${returnQuizProgress()}
   </div>  
   `;
